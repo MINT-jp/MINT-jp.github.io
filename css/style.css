@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/* ------------------------------ */
+/* リセットCSS */
+/* ------------------------------ */
+html {
+  color: #000;
+  background: #fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+
+
+q:before,
+q:after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  *font-size: 100%;
+  border-radius: 0;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: inherit;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  display: block;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+legend {
+  color: #000;
+}
+
+main {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+svg {
+  display: block;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ------------------------------ */
+/* 全体共通のスタイル */
+/* ------------------------------ */
+html {
+  background-color: #fff;
+}
+
+body {
+  line-height: 1.75;
+  font-size: 16px;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+.main {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ------------------------------ */
+/* sample01 */
+/* ------------------------------ */
+.header01 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*
+  ↓ 固定にしたい場合は下記を入れる
+      position: sticky;
+      top: 0;
+      left: 0;
+  */
+}
+
+.header01-logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header01-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header01-item--contact {
+  background-color: #2486d1;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+/* ------------------------------ */
+/* sample02 */
+/* ------------------------------ */
+.header02 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+}
+
+.header02-logo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header02-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+/* ------------------------------ */
+/* sample03 */
+/* ------------------------------ */
+.header03 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.header03-logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header03-list {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header03-item--contact {
+  background-color: #2486d1;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  margin-left: auto;
+}
+
+/* ------------------------------ */
+/* sample04 */
+/* ------------------------------ */
+.header04 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.header04-logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header04-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header04-contact {
+  background-color: #2486d1;
+  font-weight: bold;
+  display: inline-block;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  margin-left: auto;
+}
+
+/* ------------------------------ */
+/* sample04-02 */
+/* ------------------------------ */
+/*
+Flexboxを使ったパターン
+正確に中央にならないので使うべきではない
+*/
+.header04-02 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header04-02-contact {
+  background-color: #2486d1;
+  font-weight: bold;
+  display: inline-block;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+/* ------------------------------ */
+/* sample04-03 */
+/* ------------------------------ */
+/*
+positionを使ったパターン
+*/
+.header04-03 {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header04-03-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header04-03-contact {
+  background-color: #2486d1;
+  font-weight: bold;
+  display: inline-block;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+/*# sourceMappingURL=style.css.map */
+body {
+  margin: 0;
+  padding: 0;
+}
+.loading {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #fdfdfd;
+}
+.loading.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms;
+}
+.loading .circle {
+  display: block;
+  position: relative;
+  top: calc( 50% - 20px );
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 8px solid #e0e0e0;
+  border-top: 7px solid #ffcccc;
+  border-radius: 50px;
+  animation: loading 700ms linear 0ms infinite normal both;
+}
+@keyframes loading {
+  0% { transform: rotate( 0deg ); }
+  100% { transform: rotate( 360deg ); }
+}
+
+
+.circle {
+    background-color: #2196F3;   /* 背景色指定 */
+    position: absolute;          /* 位置指定 */
+    padding: 20px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    margin:  auto;               /* 中央寄せ */
+    width:  150px;               /* 幅指定 */
+    height: 80px;                /* 高さ指定 */
+    margin: auto;
+    background-image: url("summerriver.jpg");
+    width:  180px;
+    height: 180px;
+    border-radius: 50%;
+    background-position: left top;
+    border: 9px solid #00cc00; /* 枠線を付加 */
+    animation-name:fadeInAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+.mannnaka {
+   background-color: #2196F3;   /* 背景色指定 */
+   position: absolute;          /* 位置指定 */
+   padding: 20px;               /* 余白指定 */
+   top:  0;                     /* 位置指定 */
+   bottom:  0;                  /* 位置指定 */
+   left:  0;                    /* 位置指定 */
+   right:  0;                   /* 位置指定 */
+   margin:  auto;               /* 中央寄せ */
+   width:  150px;               /* 幅指定 */
+   height: 80px;                /* 高さ指定 */
+}
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 下から */
+
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* 上から */
+
+.fadeDown{
+animation-name:fadeDownAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* 左から */
+
+.fadeLeft{
+animation-name:fadeLeftAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeLeftAnime{
+  from {
+    opacity: 0;
+  transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+/* 右から */
+
+.fadeRight{
+animation-name:fadeRightAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeRightAnime{
+  from {
+    opacity: 0;
+  transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+p{
+  margin:50px 0;
+}
+
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 220px;
+  padding: 20px;
+  margin:0 20px 20px 20px;
+  background: #666;
+  color: #fff;
+}
+
+p{
+  margin: auto;
+}
+
+
+#icon{
+  width: auto;
+  height: auto;
+  background-color: #fff;
+}
