@@ -1,10 +1,134 @@
+.audio_background{
+   background-image: url(background2.png);
+}
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*header設定*/
+#header {
+   position: relative;
+   /*h1の中央寄せ配置の起点とするためのrelative*/
+   height: 100vh;
+   /*高さを全画面にあわせる*/
+}
+
+
+.container-video {
+   position: relative;
+   height: 600px;
+   overflow: hidden;
+   opacity: 0.01;
+   animation: load 1.5s 0.8s ease-out forwards;
+}
+
+.container-video #video {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -1000;
+   overflow: hidden;
+   transform: translate(-50%, -50%) scale(1.05);
+}
+
+@keyframes load {
+   100% {
+      opacity: 1;
+   }
+}
+
+.table-center {
+   display: table;
+   width: 100%;
+   position: relative;
+   height: 100%;
+}
+
+.table-center>div {
+   display: table-cell;
+   vertical-align: middle;
+   position: relative;
+   text-align: center;
+}
+
+.table-center>div p {
+   color: #fff;
+   text-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin: 10px;
+   font-size: 2em;
+   font-weight: 600;
+}
+
+#video-area {
+   position: fixed;
+   z-index: -1;
+   /*最背面に設定*/
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   overflow: hidden;
+}
+
+#video {
+   /*天地中央配置*/
+   position: absolute;
+   z-index: -1;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   /*縦横幅指定*/
+   width: 177.77777778vh;
+   /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+   height: 56.25vw;
+   /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+   min-height: 100%;
+   min-width: 100%;
+}
+
+/*見出し設定*/
+body{
+   text-shadow: 0 0 15px #666;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+#container {
+   background: #fff;
+   padding: 300px 0;
+   text-align: center;
+}
+/* BUG:わけがわからない */
+
 * {
    box-sizing: border-box;
+}
+.fl1{
+  float: left; 
+}
+.TextTyping span {
+	display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+ 	content: "|";
+	animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime{
+	from{opacity:0}
+	to{opacity:1}
 }
 body {
    margin: 0;
    padding: 0;
-   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: 'Kosugi Maru', sans-serif;
    background-image: url(background.png);
    background-size: 100%;
    background-repeat: no-repeat;
