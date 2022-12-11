@@ -1,5 +1,96 @@
+@font-face {
+   font-family: 'KikaiChokokuJIS';
+   src: url(./fonts/KikaiChokokuJIS-Md.otf);
+}
+
 .audio_background{
    background-image: url(background2.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.wrapper {
+   width: 100%;
+   padding: 40px;
+   box-sizing: border-box;
+
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.clock {
+   background-color: #aed0ff;
+   border: 3px solid #4280d7;
+   width: 400px;
+   height: 400px;
+   position: relative;
+   border-radius: 50%;
+}
+
+.clock::after {
+   width: 16px;
+   height: 16px;
+   background: #4280d7;
+   content: "";
+
+   position: absolute;
+   top: calc(50% - 8px);
+   left: calc(50% - 8px);
+   border-radius: 50%;
+}
+
+.line {
+   position: absolute;
+   transform-origin: bottom;
+}
+
+.hour {
+   width: 8px;
+   height: 140px;
+   background: #2e5894;
+   top: calc(50% - 140px);
+   left: calc(50% - 4px);
+}
+
+.min {
+   width: 4px;
+   height: 180px;
+   background: #2e5894;
+   top: calc(50% - 180px);
+   left: calc(50% - 2px);
+}
+
+.sec {
+   width: 1px;
+   height: 180px;
+   background: #2e5894;
+   top: calc(50% - 180px);
+   left: calc(50% - 0.5px);
+}
+
+.scale {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+.scale>div {
+   position: absolute;
+   top: 0;
+   left: calc(50% - 2px);
+   width: 4px;
+   height: 50%;
+   transform-origin: bottom;
+}
+
+.scale>div::after {
+   position: absolute;
+   top: 0;
+   content: "";
+   width: 4px;
+   height: 12px;
+   background-color: #4280d7;
 }
 
 /*========= 背景動画設定のCSS ===============*/
@@ -96,7 +187,19 @@ body{
    text-shadow: 0 0 15px #666;
 }
 
+p .black{
+color: black;
+}
+.white{
+   color: #fff;
+}
+p{
+   color: #fff;
+}
 /*========= レイアウトのためのCSS ===============*/
+.small {
+   font-size: small;
+}
 
 #container {
    background: #fff;
@@ -104,6 +207,7 @@ body{
    text-align: center;
 }
 /* BUG:わけがわからない */
+
 
 * {
    box-sizing: border-box;
@@ -128,9 +232,9 @@ body{
 body {
    margin: 0;
    padding: 0;
-   font-family: 'Kosugi Maru', sans-serif;
+   font-family: 'KikaiChokokuJIS', sans-serif;
    background-image: url(background.png);
-   background-size: 100%;
+   background-size: auto;
    background-repeat: no-repeat;
    letter-spacing : 0.2em;
 }

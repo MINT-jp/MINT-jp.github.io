@@ -11,13 +11,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 </head>
-
 <body align="center">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="typed.js"></script>
       <script src="materialize/js/materialize.js"></script>
-   </noscript>
+      <script src="sub.js"></script>
    <header>
       <h1>
          <a href="#">Portfolio</a>
@@ -31,9 +30,19 @@
          </ul>
       </nav>
    </header>
+   <noscript><h2><p>JavaScriptオンにしてくれないとほとんどの機能使えないよ</p></h2></noscript>
    <div class="main-visual">
       <h2 class="heading-primary">使い所がない<span class="typed"></span></h2>
    </div>
+      <div class="wrapper">
+         <div class="clock">
+            <div class="scale"></div>
+            <div class="hour line"></div>
+            <div class="min line"></div>
+            <div class="sec line"></div>
+         </div>
+      </div>
+   <p class="white"><script>Greeting();</script></p>
    <br>
 <hr>
    <div align="center">
@@ -65,6 +74,7 @@
    <iframe width="315" height="560" src="https://www.youtube.com/embed/d2AAggxKNN8" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
+
 <!--今までありがとうございました探さないでください-->
 </body>
 
